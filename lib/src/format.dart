@@ -20,22 +20,22 @@ abstract class LayoutFormat {
   /// The number of columns displayed in the grid is determined by the
   /// breakpoint range (a range of predetermined screen sizes) at which a screen is viewed,
   /// whether it’s a breakpoint for mobile, tablet, or another size.
-  final LayoutValue<int> columns = const ConstantLayoutValue(12);
+  LayoutValue<int> get columns => const ConstantLayoutValue(12);
 
   ///  Gutters are the spaces between columns. They help separate content.
   ///  Gutter widths are fixed values at each breakpoint range.
   /// To better adapt to the screen, gutter width can change at different breakpoints.
   /// Wider gutters are more appropriate for larger screens, as they create more whitespace between columns.
-  final LayoutValue<double> gutter = const ConstantLayoutValue(0);
+  LayoutValue<double> get gutter => const ConstantLayoutValue(0);
 
   /// Margins are the space between content and the left and right edges of the screen.
   /// Margin widths are defined as fixed values at each breakpoint range.
   /// To better adapt to the screen, the margin width can change at different breakpoints.
   /// Wider margins are more appropriate for larger screens, as they create more whitespace around the perimeter of content.
-  final LayoutValue<double> margin = const ConstantLayoutValue(0);
+  LayoutValue<double> get margin => const ConstantLayoutValue(0);
 
   /// Max width allow in FixedWidth widget.
-  final LayoutValue<double> maxWidth = LayoutValue.screenWidth;
+  LayoutValue<double> get maxWidth => LayoutValue.screenWidth;
 
   VisualDensity visualDensity(BuildContext context) {
     return Theme.of(context).visualDensity;
